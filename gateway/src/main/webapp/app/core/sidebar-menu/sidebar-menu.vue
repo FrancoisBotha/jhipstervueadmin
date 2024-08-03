@@ -35,6 +35,82 @@
         </router-link>
         <span class="tooltip">Test Page 3</span>
       </li>
+      <!-- Micro Frontends Entities menu -->
+      <li>
+        <div class="menu-item-parent" @click="toggleEntities">
+          <font-awesome-icon class="jva-icon" icon="folder" />
+          <span class="nav-item">Entities</span>
+          <font-awesome-icon class="jva-icon-toggle" :icon="entitiesIcon" @click="toggleEntities"/>
+        </div>
+        <span class="tooltip">Entities</span>
+      </li>
+      <div v-show="entitiesVisible">
+        <demoapp-entities-menu :is-active="isActive"></demoapp-entities-menu>
+        <store-menu :is-active="isActive"></store-menu>
+      </div>
+                <!-- JHipster Admin menu -->
+                <li>
+            <div class="menu-item-parent" @click="toggleAdmin">
+              <font-awesome-icon class="jva-icon" icon="folder" />
+              <span class="nav-item">Admin</span>
+              <font-awesome-icon class="jva-icon-toggle" :icon="adminIcon" @click="toggleAdmin"/>
+            </div>
+            <span class="tooltip">Admin</span>
+          </li>
+          <!-- Transition for admin items -->
+          <transition name="slide">
+            <div>
+              <li v-show="adminVisible">
+              <div class="menu-item" @click="$router.push({ name: 'JhiUser' })">
+                <font-awesome-icon class="jva-icon" icon="user" />
+                <span class="nav-item">{{ $t('global.menu.admin.userManagement') }}</span>
+              </div>
+              <span class="tooltip">User Management</span>
+            </li>
+            <li v-show="adminVisible">
+              <div class="menu-item" @click="$router.push({ name: 'JhiMetricsComponent' })">
+                <font-awesome-icon class="jva-icon" icon="tachometer-alt" />
+                <span class="nav-item">{{ $t('global.menu.admin.metrics') }}</span>
+              </div>
+              <span class="tooltip">Metrics</span>
+            </li>
+            <li v-show="adminVisible">
+              <div class="menu-item" @click="$router.push({ name: 'JhiHealthComponent' })">
+                <font-awesome-icon class="jva-icon" icon="heart" />
+                <span class="nav-item">{{ $t('global.menu.admin.health') }}</span>
+              </div>
+              <span class="tooltip">Health</span>
+            </li>
+            <li v-show="adminVisible">
+              <div class="menu-item" @click="$router.push({ name: 'JhiConfigurationComponent' })">
+                <font-awesome-icon class="jva-icon" icon="list" />
+                <span class="nav-item">{{ $t('global.menu.admin.configuration') }}</span>
+              </div>
+              <span class="tooltip">Configuration</span>
+            </li>
+            <li v-show="adminVisible">
+              <div class="menu-item" @click="$router.push({ name: 'JhiLogsComponent' })">
+                <font-awesome-icon class="jva-icon" icon="tasks" />
+                <span class="nav-item">{{ $t('global.menu.admin.logs') }}</span>
+              </div>
+              <span class="tooltip">Logs</span>
+            </li>
+            <li v-show="adminVisible" v-if="openAPIEnabled">
+              <div class="menu-item" @click="$router.push({ name: 'JhiDocsComponent' })">
+                <font-awesome-icon class="jva-icon" icon="book" />
+                <span class="nav-item">{{ $t('global.menu.admin.apidocs') }}</span>
+              </div>
+              <span class="tooltip">API</span>
+            </li>
+            </div>
+          </transition>
+        <li>
+          <div class="menu-item" v-on:click="logout()">
+            <font-awesome-icon class="jva-icon" icon="sign-out-alt" />
+            <span class="nav-item">Log out</span>
+          </div>
+          <span class="tooltip">Log out</span>
+        </li>
     </ul>
   </div>
   <div class="main-content">
