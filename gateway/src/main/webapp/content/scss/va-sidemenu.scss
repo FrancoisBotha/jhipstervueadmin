@@ -1,0 +1,183 @@
+@import 'va-variables';
+
+.sidebar {
+    box-sizing: border-box;
+    position: fixed;
+    top: 2.5rem; /* Adjusted to be below a navbar of height  */
+    left: 0px; /* Assuming this is the intended left position */
+    height: calc(100vh - 2.5rem); /* Adjusted to accommodate the navbar's height */
+    background-color: $sidebar-menu-bg-color;
+    transition: all 0.5s ease;
+    z-index: 1;
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 3.5rem;  
+  }
+
+  .sidebar.active {
+    width: 250px;
+  }
+
+  .sidebar .menu-toggle-button {
+    margin-bottom: 3rem;
+  }
+
+  .sidebar #btn {
+    position: absolute;
+    color: #fff;
+    top: 0.4rem;
+    left: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+
+  .sidebar ul {
+    padding-left: 0;
+    margin-top: 1rem;
+  }
+
+  .sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    line-height: 50px;
+    padding-left: 0.5rem;
+  }
+
+  .sidebar ul li:hover,
+  .sidebar ul li.active {
+    background-color: $sidebar-menu-hover-bg-color;
+    color: white;
+    border-radius: 0.8rem;
+  }
+
+  .jva-icon {
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 12px;
+    padding: 7px;
+  }
+
+  .toggle-arrow {
+    margin-left: auto; /* Push the arrow to the right */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }
+
+  .sidebar .menu-item {
+    color: #D1E8E2;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    min-height: 50px;
+    width: 2.5rem;
+  }
+
+  .sidebar.active .menu-item {
+    width: 100%;
+  }
+
+  .sidebar .menu-item-parent {
+    color: #D1E8E2;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    min-height: 50px;
+    width: 2.5rem;
+  }
+
+  .sidebar .menu-item-child {
+    color: #D1E8E2;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    padding-left: 1.5rem; /* Adjust this value for the desired indentation */
+  }
+
+  .sidebar.active .menu-item-child:hover {
+    background-color: $sidebar-menu-hover-bg-color;
+    color: white
+  }
+
+  /* Control displaying menu descriptions when menu is expanded */
+  .sidebar .nav-item {
+    display: none; /* Hide the nav items when the sidebar is minimized */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+  .sidebar.active .nav-item {
+    display: block; /* Show the nav items when the sidebar is expanded */
+  }
+
+  .sidebar .jva-icon-toggle {
+    display: none;
+  }
+
+  .sidebar.active .jva-icon-toggle {
+    display: block; /* Show the nav items when the sidebar is expanded */
+    min-width: 40px;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 12px;
+  }
+
+  /* Tooltip */
+  .sidebar ul li .tooltip {
+    color: #D1E8E2;
+    background-color: #0d0e0d;
+    position: relative;
+    left: 9rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.6rem;
+    padding: 0.4rem 1.2rem;
+    z-index: 20; /* Ensure the tooltip has a higher z-index */
+    opacity: 0;
+    pointer-events: none; /* Ensure it doesn't interfere with other elements */
+    transition: opacity 0.3s; /* Add transition for better UX */
+    white-space: nowrap; /* Prevent text from wrapping */
+    display: block; /* Keep the text in a single line */
+    text-align: left; /* Align text to the left */
+    min-width: 10rem;
+  }
+
+  .sidebar ul li:hover .tooltip {
+    opacity: 1;
+  }
+  
+  .sidebar.active ul li .tooltip {
+    display: none;
+  }
+
+  /* Control display size of main content area, based on menu extended or not*/
+  .main-content {
+    position: relative;
+    top: 2.5rem;
+    left: 3.5rem;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    width: calc(100% - 3.5rem);
+  }  
+  
+  .sidebar.active ~ .main-content {
+    left: 250px;
+    transition: all 0.5s ease;
+    width: calc(100% - 250px);
+  }
+  
+  .sidebar.active ~ .main-content {
+    left: 250px;
+    transition: all 0.5s ease;
+    width: calc(100% - 250px);
+  }
+
+  .jva-container {
+    position: relative;
+    padding: 2rem;
+  } 

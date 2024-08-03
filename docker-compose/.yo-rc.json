@@ -1,0 +1,14 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["gateway", "demoapp", "store"],
+    "clusteredDbApps": [],
+    "deploymentType": "docker-compose",
+    "directoryPath": "../",
+    "dockerRepositoryName": "francoisbotha",
+    "gatewayType": "SpringCloudGateway",
+    "jhipsterVersion": "8.6.0",
+    "jwtSecretKey": "NmZlODJjZGJkNjA4MzFiNjgxYmJiZDAzOWRjNGQ3N2IxZjQ5NDM4ZmIwM2FhNjU4M2QzOTYyZDBiMGRkZGE3MDJkNDRlNzMyMzI1MWNlMmE5YWVkNDIzYzNlMTYyOGViMmY4OQ==",
+    "monitoring": "no",
+    "serviceDiscoveryType": "consul"
+  }
+}

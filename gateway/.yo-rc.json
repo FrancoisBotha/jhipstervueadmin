@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "gateway",
+    "applications": {
+      "demoapp": {
+        "applicationIndex": 1,
+        "clientFramework": "vue",
+        "serverPort": "8081"
+      },
+      "store": {
+        "applicationIndex": 2,
+        "clientFramework": "vue",
+        "serverPort": "8082"
+      }
+    },
+    "authenticationType": "jwt",
+    "baseName": "gateway",
+    "buildTool": "maven",
+    "clientFramework": "vue",
+    "devServerPort": 9060,
+    "entities": [],
+    "jhipsterVersion": "8.6.0",
+    "jwtSecretKey": "MTU3ZTgyM2YzNjUxM2M1MWVkMGFmMDNhNmEzYzQ3YTYxY2UyZTRmNzg1OTRhMjNhNmUxNTU2MTZiOTQyNTUxNmU0OWZmOTYzZDRkZWQwM2YxNjg4MDFlZjZhZDhhOGVhMDc3MWI5YmI5NDliM2FkOTdhZGE4MzM3MTBmNjljZWI=",
+    "languages": ["en"],
+    "microfrontends": [
+      {
+        "baseName": "demoapp"
+      },
+      {
+        "baseName": "store"
+      }
+    ],
+    "nativeLanguage": "en",
+    "packageFolder": "au/com/businessautomationtechnology/gateway",
+    "packageName": "au.com.businessautomationtechnology.gateway",
+    "prodDatabaseType": "postgresql",
+    "reactive": true,
+    "serverPort": 8080,
+    "serviceDiscoveryType": "consul",
+    "testFrameworks": ["cypress"]
+  }
+}

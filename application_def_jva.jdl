@@ -1,0 +1,84 @@
+application {
+  config {
+    baseName gateway
+    reactive true
+    packageName au.com.businessautomationtechnology.gateway
+    applicationType gateway
+    authenticationType jwt
+    buildTool maven
+    clientFramework vue
+    prodDatabaseType postgresql
+    serviceDiscoveryType consul
+    testFrameworks [cypress]
+    microfrontends [demoapp, store]
+  }
+}
+
+application {
+  config {
+    baseName demoapp
+    reactive false
+    packageName au.com.businessautomationtechnology.demoapp
+    applicationType microservice
+    authenticationType jwt
+    buildTool maven
+    clientFramework vue
+    prodDatabaseType postgresql
+    enableHibernateCache false
+    serverPort 8081
+    serviceDiscoveryType consul
+    testFrameworks [cypress]
+  }
+  entities Blog, Post
+}
+
+application {
+  config {
+    baseName store
+    reactive false
+    packageName au.com.businessautomationtechnology.store
+    applicationType microservice
+    authenticationType jwt
+    buildTool maven
+    clientFramework vue
+    prodDatabaseType postgresql
+    enableHibernateCache false
+    serverPort 8082
+    serviceDiscoveryType consul
+    testFrameworks [cypress]
+  }
+  entities Product
+}
+
+entity Blog {
+  name String required minlength(3)
+  handle String required minlength(2)
+}
+
+entity Post {
+  title String required
+  content TextBlob required
+  date Instant required
+}
+
+
+entity Product {
+  title String required
+  price BigDecimal required min(0)
+  image ImageBlob
+}
+
+relationship ManyToOne {
+  Post{blog(name)} to Blog
+}
+
+
+paginate Post with infinite-scroll
+paginate Product with pagination
+
+deployment {
+  deploymentType docker-compose
+  serviceDiscoveryType consul
+  appsFolders [gateway, demoapp, store]
+  dockerRepositoryName "francoisbotha"
+}

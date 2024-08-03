@@ -1,0 +1,26 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 2,
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "baseName": "store",
+    "buildTool": "maven",
+    "clientFramework": "vue",
+    "devServerPort": 9062,
+    "enableHibernateCache": false,
+    "entities": ["Product"],
+    "jhipsterVersion": "8.6.0",
+    "jwtSecretKey": "YjY0MjE2OWM4YTQwMjliYzRlODM1NzMwN2VmOTIwOTgxM2M5ZmJkZDE0ZjY2NmEzODdmYjc0MjM1MjAyMGIwYmQ2YjVjZGQ4MWI2ZTMyMjgzMWJiMjcwN2YwZDIxYjIxOWEzNzcxY2Q3NTY0ZTJlZGZhNjQ0N2ViOTg1ZTlmYmY=",
+    "languages": ["en"],
+    "lastLiquibaseTimestamp": 1721457633000,
+    "nativeLanguage": "en",
+    "packageFolder": "au/com/businessautomationtechnology/store",
+    "packageName": "au.com.businessautomationtechnology.store",
+    "prodDatabaseType": "postgresql",
+    "reactive": false,
+    "serverPort": "8082",
+    "serviceDiscoveryType": "consul",
+    "skipUserManagement": true,
+    "testFrameworks": ["cypress"]
+  }
+}

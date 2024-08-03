@@ -1,0 +1,107 @@
+/* ==========================================================================
+Navbar
+========================================================================== */
+
+@import 'va-variables';
+
+/* jhcc-custom */
+.jva-navbar {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: $navbar-bg-color;
+    height: 2.5rem;
+    padding: 0rem !important;
+    justify-content: start;
+  }
+  
+  /* ==========================================================================
+      Title
+      ========================================================================== */
+  
+  .navbar-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: lighter;
+    color: white;
+    margin-left: 0.5rem;
+  }
+  
+  .jhipster-title {
+    font-size: larger;
+  }
+  
+  .navbar-version {
+    font-size: 10px;
+    vertical-align: sub;
+    color: white;
+  }
+  
+  .navbar-dark button {
+    color: white;
+  }
+  
+  .icon-sidebar {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  /* ==========================================================================
+      Logo styles
+      ========================================================================== */
+  .navbar-brand.logo {
+    padding: 2px 2px;
+  }
+  
+  .logo .logo-img {
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+  }
+  
+  .logo-img {
+    height: 100%;
+    background: url('../../../content/images/icon.png') no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    filter: drop-shadow(0 0 0.05rem white);
+  }
+  
+  .sign-out {
+    color: white;
+    display: flex;
+    margin-left: auto;
+    padding-right: 2rem;
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 0.5rem 1rem; /* Add padding for button-like appearance */
+    background-color: #2C3531; /* Optional: background color */
+    border: none; /* Optional: remove default border */
+    border-radius: 5px; /* Optional: rounded corners */
+    align-items: center; /* Center content vertically */
+    text-decoration: none; /* Remove underline from text, if any */
+  }
+  
+  .sign-out:hover {
+    background-color: #565a5e; /* Optional: darker background on hover */
+  }
+  
+  .sign-in {
+    color: white;
+    display: flex;
+    margin-left: auto;
+    padding-right: 2rem;
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 0.5rem 1rem; /* Add padding for button-like appearance */
+    background-color: $navbar-bg-color; /* Optional: background color */
+    border: none; /* Optional: remove default border */
+    border-radius: 5px; /* Optional: rounded corners */
+    align-items: center; /* Center content vertically */
+    text-decoration: none; /* Remove underline from text, if any */
+  }
+  
+  .sign-in:hover {
+    background-color: #565a5e; /* Optional: darker background on hover */
+  }
