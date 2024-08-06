@@ -12,28 +12,70 @@
           <font-awesome-icon class="jva-icon" icon="home" />
           <span class="nav-item">Home</span>
         </div>
-        <span class="tooltip">Test Page 1</span>
+        <span class="tooltip">Home</span>
       </li>
       <li :class="{ active: $route.path === '/page1' }">
         <div class="menu-item" @click="$router.push({ name: 'Page1' })">
           <font-awesome-icon class="jva-icon" icon="gear" />
-          <span class="nav-item">Test Page 1</span>
+          <span class="nav-item">Dashboard</span>
         </div>
-        <span class="tooltip">Test Page 1</span>
+        <span class="tooltip">Dashboard</span>
       </li>
       <li :class="{ active: $route.path === '/page2' }">
         <router-link to="/page2" class="menu-item">
           <font-awesome-icon class="jva-icon" icon="user" />
-          <span class="nav-item">Test Page 2</span>
+          <span class="nav-item">Components</span>
         </router-link>
-        <span class="tooltip">Test Page 2</span>
+        <span class="tooltip">Components</span>
+      </li>
+      <li :class="{ active: $route.path === '/page2' }">
+        <router-link to="/page2" class="menu-item">
+          <font-awesome-icon class="jva-icon" icon="user" />
+          <span class="nav-item">Icons</span>
+        </router-link>
+        <span class="tooltip">Icons</span>
+      </li>
+      <li :class="{ active: $route.path === '/page2' }">
+        <router-link to="/page2" class="menu-item">
+          <font-awesome-icon class="jva-icon" icon="user" />
+          <span class="nav-item">Table</span>
+        </router-link>
+        <span class="tooltip">Table</span>
+      </li>
+      <li :class="{ active: $route.path === '/page2' }">
+        <router-link to="/page2" class="menu-item">
+          <font-awesome-icon class="jva-icon" icon="user" />
+          <span class="nav-item">Tabs</span>
+        </router-link>
+        <span class="tooltip">Tabs</span>
+      </li>
+      <li :class="{ active: $route.path === '/page2' }">
+        <router-link to="/page2" class="menu-item">
+          <font-awesome-icon class="jva-icon" icon="user" />
+          <span class="nav-item">Excel</span>
+        </router-link>
+        <span class="tooltip">Excel</span>
+      </li>
+      <li :class="{ active: $route.path === '/page2' }">
+        <router-link to="/page2" class="menu-item">
+          <font-awesome-icon class="jva-icon" icon="user" />
+          <span class="nav-item">Pdf</span>
+        </router-link>
+        <span class="tooltip">Pdf</span>
+      </li>
+      <li :class="{ active: $route.path === '/page2' }">
+        <router-link to="/page2" class="menu-item">
+          <font-awesome-icon class="jva-icon" icon="user" />
+          <span class="nav-item">Clipboard</span>
+        </router-link>
+        <span class="tooltip">Clipboard</span>
       </li>
       <li :class="{ active: $route.path === '/page3' }">
         <router-link to="/page3" class="menu-item">
           <font-awesome-icon class="jva-icon" icon="sitemap" />
-          <span class="nav-item">Test Page 3</span>
+          <span class="nav-item">Maps</span>
         </router-link>
-        <span class="tooltip">Test Page 3</span>
+        <span class="tooltip">Maps</span>
       </li>
       <!-- Micro Frontends Entities menu -->
       <li>
