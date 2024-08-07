@@ -54,6 +54,7 @@ import { faFolder } from '@fortawesome/free-solid-svg-icons/faFolder';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons/faCircleInfo';
+import { faIcons } from '@fortawesome/free-solid-svg-icons/faIcons';
 // jhcc-custom end
 
 const datetimeFormats: IntlDateTimeFormats = {
@@ -142,7 +143,8 @@ export function initFortAwesome(vue) {
     faFolder,
     faChevronUp,
     faChevronDown,
-    faCircleInfo
+    faCircleInfo,
+    faIcons
     // jhcc-custom end
   );
 }

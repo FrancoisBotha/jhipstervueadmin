@@ -16,10 +16,17 @@
       </li>
       <li :class="{ active: $route.path === '/page1' }">
         <div class="menu-item" @click="$router.push({ name: 'Page1' })">
-          <font-awesome-icon class="jva-icon" icon="gear" />
+          <font-awesome-icon class="jva-icon" icon="gauge-high" />
           <span class="nav-item">Dashboard</span>
         </div>
         <span class="tooltip">Dashboard</span>
+      </li>
+      <li :class="{ active: $route.path === '/vue-admin-icons' }">
+        <router-link to="/vue-admin-icons" class="menu-item">
+          <font-awesome-icon class="jva-icon" icon="icons" />
+          <span class="nav-item">Icons</span>
+        </router-link>
+        <span class="tooltip">Icons</span>
       </li>
       <li :class="{ active: $route.path === '/page2' }">
         <router-link to="/page2" class="menu-item">
@@ -28,15 +35,8 @@
         </router-link>
         <span class="tooltip">Components</span>
       </li>
-      <li :class="{ active: $route.path === '/page2' }">
-        <router-link to="/page2" class="menu-item">
-          <font-awesome-icon class="jva-icon" icon="user" />
-          <span class="nav-item">Icons</span>
-        </router-link>
-        <span class="tooltip">Icons</span>
-      </li>
-      <li :class="{ active: $route.path === '/page2' }">
-        <router-link to="/page2" class="menu-item">
+      <li :class="{ active: $route.path === '/vue-admin-tables' }">
+        <router-link to="/vue-admin-tables" class="menu-item">
           <font-awesome-icon class="jva-icon" icon="user" />
           <span class="nav-item">Table</span>
         </router-link>

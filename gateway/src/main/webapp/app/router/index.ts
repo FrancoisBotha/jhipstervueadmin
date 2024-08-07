@@ -7,6 +7,7 @@ import account from '@/router/account';
 import admin from '@/router/admin';
 import entities from '@/router/entities';
 import pages from '@/router/pages';
+import vueAdmin from '@/router/vue-admin';
 
 export const createRouter = () =>
   createVueRouter({
@@ -33,6 +34,7 @@ export const createRouter = () =>
       ...admin,
       entities,
       ...pages,
+      ...vueAdmin
     ],
   });
 
