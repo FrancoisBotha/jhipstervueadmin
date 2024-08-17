@@ -12,6 +12,11 @@ h4 {
   font-weight: 300;
 }
 
+html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family:
@@ -29,6 +34,8 @@ body {
   color: #212529;
   background: #e4e5e6;
   background-color: #fff;
+  height: 100%;
+  margin: 0;
 }
 
 a {

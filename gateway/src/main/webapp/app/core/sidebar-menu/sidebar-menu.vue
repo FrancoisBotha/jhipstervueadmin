@@ -35,13 +35,33 @@
         </router-link>
         <span class="tooltip">Components</span>
       </li>
-      <li :class="{ active: $route.path === '/vue-admin-tables' }">
-        <router-link to="/vue-admin-tables" class="menu-item">
-          <font-awesome-icon class="jva-icon" icon="user" />
-          <span class="nav-item">Table</span>
-        </router-link>
-        <span class="tooltip">Table</span>
+      <!-- Tables menu -->
+      <li>
+        <div class="menu-item-parent" @click="toggleTables">
+          <font-awesome-icon class="jva-icon" icon="table-list" />
+          <span class="nav-item">Tables</span>
+          <font-awesome-icon class="jva-icon-toggle" :icon="tablesIcon" @click="toggleTables"/>
+        </div>
+        <span class="tooltip">Tables</span>
       </li>
+      <transition name="slide">
+        <div>
+          <li v-show="tablesVisible" :class="{ active: $route.path === '/vue-admin-tables-bootstrap' }">
+            <router-link to="/vue-admin-tables-bootstrap" class="menu-item">
+              <font-awesome-icon class="jva-icon" icon="table-list" />
+              <span class="nav-item">Bootstrap Tables</span>
+            </router-link>
+            <span class="tooltip">Bootstrap Table</span>
+        </li>
+        <li v-show="tablesVisible"  :class="{ active: $route.path === '/vue-admin-tables-tabulator' }">
+            <router-link to="/vue-admin-tables-tabulator" class="menu-item">
+              <font-awesome-icon class="jva-icon" icon="table-list" />
+              <span class="nav-item">Tabulator</span>
+            </router-link>
+            <span class="tooltip">Tabulator</span>
+        </li>
+      </div>
+      </transition>
       <li :class="{ active: $route.path === '/page2' }">
         <router-link to="/page2" class="menu-item">
           <font-awesome-icon class="jva-icon" icon="user" />

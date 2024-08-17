@@ -66,15 +66,18 @@ export default defineComponent({
 
 
     const entitiesVisible = ref(true);
-
     const toggleEntities = () => {
       entitiesVisible.value = !entitiesVisible.value;
     };
 
     const adminVisible = ref(true);
-
     const toggleAdmin = () => {
       adminVisible.value = !adminVisible.value;
+    };
+
+    const tablesVisible = ref(true);
+    const toggleTables = () => {
+      tablesVisible.value = !tablesVisible.value;
     };
     
     const logout = async () => {
@@ -94,12 +97,19 @@ export default defineComponent({
       return entitiesVisible.value ? 'chevron-up' : 'chevron-down';
     });
 
+    const tablesIcon = computed(() => {
+      return tablesVisible.value ? 'chevron-up' : 'chevron-down';
+    });
+
     return {
       oosVisible,
       toggleModuleOO,
       ooIcon,
       toggleAdmin,
       adminVisible,
+      tablesVisible,
+      tablesIcon,
+      toggleTables,
       adminIcon,
       entitiesIcon,
       entitiesVisible,

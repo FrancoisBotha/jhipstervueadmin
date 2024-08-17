@@ -37,7 +37,10 @@ import {
   BCol,
   BTabs,
   BTab,
-  BTooltip
+  BTooltip,
+  BFormRadio,
+  BFormRadioGroup,
+  BTable
   // jhcc-custom end
 } from 'bootstrap-vue';
 
@@ -75,7 +78,7 @@ export function initBootstrapVue(vue) {
   vue.component('b-sidebar', BSidebar);
   vue.component('b-img', BImg);
   vue.component('b-nav', BNav);
-  vue.component('b-select', BFormSelect);
+  vue.component('b-form-select', BFormSelect);
   vue.component('b-card', BCard);
   vue.component('b-row', BRow);
   vue.component('b-col', BCol);
@@ -83,5 +86,8 @@ export function initBootstrapVue(vue) {
   vue.component('b-tab', BTab);
   vue.component('b-container', BContainer);
   vue.component('b-tooltip', BTooltip);
+  vue.component('b-form-radio', BFormRadio);
+  vue.component('b-form-radio-group', BFormRadioGroup);
+  vue.component('b-table', BTable);
   // jhcc-custom end
 }

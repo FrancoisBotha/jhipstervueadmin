@@ -180,4 +180,8 @@
   .jva-container {
     position: relative;
     padding: 2rem;
+    background-color: white;
+    min-height: 100vh; /* Set the height relative to the viewport height */
+    display: flex;
+    flex-direction: column;
   } 

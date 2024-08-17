@@ -2,7 +2,8 @@
 // prettier-ignore
 
 const VueAdminIcons = () => import('@/pages/vue-admin/icons/icons.vue');
-const VueAdminTables = () => import('@/pages/vue-admin/tables/tables.vue');
+const VueAdminTablesBootstrap = () => import('@/pages/vue-admin/tables/bootstrap/bootstrap-table.vue');
+const VueAdminTablesTabulator = () => import('@/pages/vue-admin/tables/tabulator/tabulator-table.vue');
 
 export default [
   {
@@ -11,8 +12,13 @@ export default [
     component: VueAdminIcons,
   }, 
   {
-    path: '/vue-admin-tables',
-    name: 'VueAdminTables',
-    component: VueAdminTables,
+    path: '/vue-admin-tables-bootstrap',
+    name: 'VueAdminTablesBootstrap',
+    component: VueAdminTablesBootstrap,
+  }
+  {
+    path: '/vue-admin-tables-tabulator',
+    name: 'VueAdminTablesTabulator',
+    component: VueAdminTablesTabulator,
   }
 ]
