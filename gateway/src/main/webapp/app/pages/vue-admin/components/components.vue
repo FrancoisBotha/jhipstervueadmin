@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-4">
+  <div class="container-fluid">
     <h1 class="text-left mb-5">Components</h1>
 
     <!-- Nav Tabs -->
@@ -198,6 +198,14 @@ const submitForm = () => {
 </script>
 
 <style>
+
+
+.container-fluid {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
 
 .btn {
   margin-right: 0.2rem;

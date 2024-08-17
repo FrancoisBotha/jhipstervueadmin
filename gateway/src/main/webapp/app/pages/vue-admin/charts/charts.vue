@@ -201,7 +201,7 @@
     }
 
     .ct-series-b .ct-bar {
-    stroke: #d1596d; /* Green for the second series */
+    stroke: #e72344; /* Green for the second series */
     }
 
     .ct-series-a .ct-line {
