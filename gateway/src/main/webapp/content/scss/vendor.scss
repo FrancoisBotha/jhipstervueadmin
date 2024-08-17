@@ -9,5 +9,7 @@ eg $input-color: red;
 // Import Bootstrap source files from node_modules
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-vue/src/index.scss';
+@import "tabulator-tables/dist/css/tabulator.min.css";
+@import "chartist/dist/index.scss";
 
 /* jhipster-needle-scss-add-vendor JHipster will add new css style */

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>Bootstrap Tables</h1>
+
     <!-- Table Options Section -->
     <div class="form-group row">
       <label class="col-lg-2 col-form-label">Table Options</label>

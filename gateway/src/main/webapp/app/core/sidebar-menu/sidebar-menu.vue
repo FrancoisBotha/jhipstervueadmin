@@ -28,9 +28,9 @@
         </router-link>
         <span class="tooltip">Icons</span>
       </li>
-      <li :class="{ active: $route.path === '/page2' }">
-        <router-link to="/page2" class="menu-item">
-          <font-awesome-icon class="jva-icon" icon="user" />
+      <li :class="{ active: $route.path === '/vue-admin-components' }">
+        <router-link to="/vue-admin-components" class="menu-item">
+          <font-awesome-icon class="jva-icon" icon="cogs" />
           <span class="nav-item">Components</span>
         </router-link>
         <span class="tooltip">Components</span>
@@ -62,12 +62,12 @@
         </li>
       </div>
       </transition>
-      <li :class="{ active: $route.path === '/page2' }">
-        <router-link to="/page2" class="menu-item">
-          <font-awesome-icon class="jva-icon" icon="user" />
-          <span class="nav-item">Tabs</span>
+      <li :class="{ active: $route.path === '/vue-admin-charts' }">
+        <router-link to="/vue-admin-charts" class="vue-admin-charts">
+          <font-awesome-icon class="jva-icon" icon="chart-line" />
+          <span class="nav-item">Charts</span>
         </router-link>
-        <span class="tooltip">Tabs</span>
+        <span class="tooltip">Charts</span>
       </li>
       <li :class="{ active: $route.path === '/page2' }">
         <router-link to="/page2" class="menu-item">

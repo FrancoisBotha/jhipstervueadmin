@@ -65,17 +65,17 @@ export default defineComponent({
     });
 
 
-    const entitiesVisible = ref(true);
+    const entitiesVisible = ref(false);
     const toggleEntities = () => {
       entitiesVisible.value = !entitiesVisible.value;
     };
 
-    const adminVisible = ref(true);
+    const adminVisible = ref(false);
     const toggleAdmin = () => {
       adminVisible.value = !adminVisible.value;
     };
 
-    const tablesVisible = ref(true);
+    const tablesVisible = ref(false);
     const toggleTables = () => {
       tablesVisible.value = !tablesVisible.value;
     };
